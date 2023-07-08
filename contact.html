@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-size: cover;
+        font-family: "Raleway", sans-serif;
+      }
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
+      .form-container label,
+      .form-container input,
+      .form-container textarea {
+        display: block;
+        margin-bottom: 10px;
+      }
+      @media screen and (min-width: 768px) {
+        body {
+          background-image: url("bosphore-16_9.jpg");
+        }
+      }
+      @media screen and (max-width: 767px) {
+        body {
+          background-image: url("bosphore-smart-phone.jpg");
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="index.html">Back</a>
+      <div class="form-container">
+        <form action="https://formspree.io/f/mqkvkqlg" method="POST">
+          <label for="name">Nom:</label>
+          <input type="text" id="name" name="name" />
+          <label for="email">Votre adresse mail:</label>
+          <input type="email" id="email" name="_replyto" />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <input type="submit" value="Envoyer" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
